@@ -6,6 +6,8 @@
  */
 int main(void)
 {
-	fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stderr);
+	char tex[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	fputs(tex, stderr);
 	return (1);
 }
