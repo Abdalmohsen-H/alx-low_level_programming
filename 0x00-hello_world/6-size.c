@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- * maine -Entry point
+ * main -Entry point
  *
  * description : sizeof
  *
- * return: always 0  - (success)
+ * Return: always 0  - (success)
  *
  */
 int main(void)
