@@ -2,6 +2,8 @@
 /**
  * maine -Entry point
  *
+ * description : sizeof
+ *
  * return: always 0  - (success)
  *
  */
