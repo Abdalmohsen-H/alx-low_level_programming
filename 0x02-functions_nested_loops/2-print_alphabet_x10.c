@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_alphabet - print lowercase alphbet
+ * print_alphabet_10x - print lowercase alphbet
  *
  * Return: Always 0 (Success)
  *
@@ -9,7 +9,7 @@ void print_alphabet_x10(void)
 {
 int i;
 
-for (i=1; i <= 10 ; i++)
+for (i = 1; i <= 10 ; i++)
 {
 	char *wor = "abcdefghijklmnopqrstuvwxyz";
 
