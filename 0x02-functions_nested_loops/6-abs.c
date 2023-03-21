@@ -7,6 +7,8 @@
  */
 int _abs(int n)
 {
+	int y;
+
 	if (n >= 0)
 	{
 		_putchar(n);
