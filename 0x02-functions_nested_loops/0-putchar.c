@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 /**
  * main -Entry point
  *
@@ -18,7 +18,7 @@ int main(void)
 		_putchar(*wor);
 		/* increments pointer variable "wor" to point to next character in string */
 
-		*wor++;
+		wor ++;
 	}
 	_putchar('\n');
 	return (0);
