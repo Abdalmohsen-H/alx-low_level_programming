@@ -8,7 +8,6 @@
 void print_alphabet(void)
 {
 		char *wor = "abcdefghijklmnopqrstuvwxyz";
-		
 		while (*wor)
 		{
 			_putchar(*wor);
