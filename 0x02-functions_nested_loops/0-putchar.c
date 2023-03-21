@@ -8,18 +8,16 @@
 int main(void)
 {
 	/*this takes the first char of the string*/
-	char *wor = "abcdefghijklmnopqrstuvwxyz";
-	void print_alphabet(void)
+	char *wor = "_putchar";
+	/**
+	 * another way for this task char sh[] = {'_', 'p', 'u', 't', 'c'
+	while (*wor)
 	{
-		while (*wor)
-		{
-			_putchar(*wor);
-			/* increments pointer variable "wor" to point to next character in string */
-	
-			wor++;
-		}
-		_putchar('\n');
+		_putchar(*wor);
+		/* increments pointer variable "wor" to point to next character in string */
+
+		wor++;
 	}
-	print_alphabet();
+	_putchar('\n');
 	return (0);
 }
