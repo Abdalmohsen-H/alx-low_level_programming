@@ -5,10 +5,10 @@
  * Return: Always 0 (Success)
  *
  */
+char *wor = "abcdefghijklmnopqrstuvwxyz";
+
 void print_alphabet(void)
 {
-		char *wor = "abcdefghijklmnopqrstuvwxyz";
-		
 		while (*wor)
 		{
 			_putchar(*wor);
