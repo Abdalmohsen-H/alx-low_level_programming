@@ -9,7 +9,7 @@ void print_alphabet_x10(void)
 {
 int i;
 
-for (i=1; i == 10 ; i++)
+for (i=1; i <= 10 ; i++)
 {
 	char *wor = "abcdefghijklmnopqrstuvwxyz";
 
@@ -19,6 +19,6 @@ for (i=1; i == 10 ; i++)
 		/* increments pointer variable "wor" to point to next character in string */
 		wor++;
 	}
+	_putchar('\n');
 }
-_putchar('\n');
 }
