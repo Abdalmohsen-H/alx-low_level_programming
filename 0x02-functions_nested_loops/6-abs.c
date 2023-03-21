@@ -15,7 +15,7 @@ int _abs(int n)
 	}
 	else
 	{
-		y = -1 * n
+		y = -1 * n;
 		_putchar(y);
 	}
 	return (0);
