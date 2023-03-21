@@ -7,18 +7,18 @@
  */
 int main(void)
 {
-	/*this takes the first char of the string*/
-	char *wor = "abcdefghijklmnopqrstuvwxyz";
-	void print_alphabet(void)
-	{
+	print_alphabet();
+	return (0);
+}
+void print_alphabet(void)
+{
 		while (*wor)
 		{
+			char *wor = "abcdefghijklmnopqrstuvwxyz";
 			_putchar(*wor);
 			/* increments pointer variable "wor" to point to next character in string */
 	
 			wor++;
 		}
 		_putchar('\n');
-	}
-	return (0);
 }
