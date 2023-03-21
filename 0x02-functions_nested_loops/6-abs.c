@@ -2,7 +2,7 @@
 /**
  * _abs - function prints the absolute value abs
  * @n: is int for the input number
- * Return: always 0 (Success)
+ * Return: absolute value
  *
  */
 int _abs(int n)
@@ -11,12 +11,11 @@ int _abs(int n)
 
 	if (n >= 0)
 	{
-		_putchar(n);
+		return (n);
 	}
 	else
 	{
 		y = -1 * n;
-		_putchar(y);
+		return (y);
 	}
-	return (0);
 }
