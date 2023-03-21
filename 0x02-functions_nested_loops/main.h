@@ -1,7 +1,7 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
 
-int _putchar(char xd);
+void _putchar(char xd);
 void print_alphabet(void);
 void print_alphabet_x10(void);
 int _islower(int c);
