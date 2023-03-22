@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	long int y[] = {1, 2};
+	long y[50] = {1, 2};
 	int count;
 
 	printf("1, 2, ");
