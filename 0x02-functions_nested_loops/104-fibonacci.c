@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	unsigned long long a = 1, b = 2, c;
+	unsigned long a = 1, b = 2, c;
 	int count;
 
 	printf("1, 2");
@@ -15,7 +15,7 @@ int main(void)
 		c = a + b;
 		a = b;
 		b = c;
-		printf(", %llu", c);
+		printf(", %lu", c);
 	}
 	printf("\n");
 	return (0);
