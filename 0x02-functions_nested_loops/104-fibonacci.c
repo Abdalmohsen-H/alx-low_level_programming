@@ -15,7 +15,7 @@ int main(void)
 		c = a + b;
 		a = b;
 		b = c;
-		printf(", %lu", c);
+		printf(", %u", c);
 	}
 	printf("\n");
 	return (0);
