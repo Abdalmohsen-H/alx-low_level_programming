@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - Entry point Fibonacci
  *
  * Return: Always 0 (Success)
  */
@@ -13,7 +13,8 @@ int main(void)
 	for (count = 2 ; count < 51 ; count++)
 	{
 		y[count] = y[count - 1] + y[count - 2];
-		printf("%0.1f", y[count]);
+		/*%.01f gor double means no decimal places*/
+		printf("%.01f", y[count]);
 		if (count < 49)
 			printf(", ");
 	}
