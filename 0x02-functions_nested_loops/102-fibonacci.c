@@ -17,6 +17,6 @@ int main(void)
 		if (count < 49)
 			printf(", ");
 	}
-	printf("20365011074\n");
+	printf("\n");
 	return (0);
 }
