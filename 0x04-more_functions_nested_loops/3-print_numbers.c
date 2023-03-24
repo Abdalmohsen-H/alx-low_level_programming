@@ -1,0 +1,18 @@
+#include "main.h"
+/**
+ * print_numbers - prints numbers
+ * Return: value 0 always
+ *
+ */
+void print_numbers(void)
+{
+	char x = '0';
+
+	while (x <= '9')
+	{
+		putchar(x);
+		x++;
+	}
+	putchar('\n');
+	return (0);
+}
