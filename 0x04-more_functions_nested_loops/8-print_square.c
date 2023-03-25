@@ -11,15 +11,16 @@ int width;
 int height;
 
 height = size;
-while(height > 0)
+while (height > 0)
 {
 	width = size;
-	while(width > 0)
+	while (width > 0)
 	{
 		_putchar('#');
 		width--;
 	}
-	_putchar('\n');
+	if (height > 1)
+		_putchar('\n');
 	height--;
 }
 _putchar('\n');
