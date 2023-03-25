@@ -2,7 +2,7 @@
 /**
  * more_numbers - Entry point
  * prints 0 to 14 , 14 time
- * Return: Always 0 (Success)
+ * Return: void
  */
 void more_numbers(void)
 {
@@ -14,11 +14,10 @@ for (d = 0 ; d < 15 ; d++)
 {
 	if (d > 9)
 	{
-		putchar(d / 10 + '0');
+		_putchar(d / 10 + '0');
 	}
-putchar(d % 10 + '0');
+_putchar(d % 10 + '0');
 }
-putchar('\n');
+_putchar('\n');
 }
-return (0);
 }
