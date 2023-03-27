@@ -11,6 +11,10 @@ void print_rev(char *s)
 	char z;
 	char *firstchar = s;
 
+	if (*s == '\0')
+	{
+	return;  /* exit function if s is empty string*/
+	}
 	while (*s != '\0')
 	{
 		s++;
