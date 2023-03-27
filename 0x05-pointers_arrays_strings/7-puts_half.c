@@ -10,11 +10,6 @@ void puts_half(char *str)
 	int length = 0;
 	int n;
 
-	if (*str == '\0')
-	{
-		_putchar('\0');
-		return;  /* exit function if s is empty string*/
-	}
 	/* calculate length of string */
 	while (*(str + length) != '\0')
 	{
