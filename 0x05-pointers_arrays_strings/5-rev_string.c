@@ -17,10 +17,10 @@ void rev_string(char *s)
 		return;  /* exit function if s is empty string*/
 	}
 	/* calculate length of string */
-	while (*(s + length) != '\0') 
+	while (*(s + length) != '\0')
 	{
 	length++;
- 	}
+	}
 	/* neglect '\0' as it was added after length*/
 	length--;
 	last = length;
