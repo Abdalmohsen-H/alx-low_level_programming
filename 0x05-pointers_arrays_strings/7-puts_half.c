@@ -12,6 +12,7 @@ void puts_half(char *str)
 
 	if (*str == '\0')
 	{
+		_putchar('\0');
 		return;  /* exit function if s is empty string*/
 	}
 	/* calculate length of string */
