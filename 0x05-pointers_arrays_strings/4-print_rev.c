@@ -13,7 +13,8 @@ void print_rev(char *s)
 
 	if (*s == '\0')
 	{
-	return;  /* exit function if s is empty string*/
+		_putchar('\n');
+		return;  /* exit function if s is empty string*/
 	}
 	while (*s != '\0')
 	{
