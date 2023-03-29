@@ -36,6 +36,7 @@ extracted_num = extracted_num * 10 + sign * (*(s + j) -'0');
 * (*(s + j) - '0') this convert number
 * from char to integer value
 *by subtracting ascii codes
+*/
 j++;
 }
 return (extracted_num);
