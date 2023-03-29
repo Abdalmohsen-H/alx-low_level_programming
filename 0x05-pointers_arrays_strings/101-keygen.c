@@ -10,32 +10,31 @@ int main(void)
 /* all available chars to use */
 char charset[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 /* Maximum length of generated words */
-int max_length = 10;
+ddint max_length = 10;
 /* hold generated word, +1 to hold '\0' */
-char word[max_length + 1];
+char word[11];
 /* define number of rand words*/
 int count_rand_words;
 /*length of generated word*/
 int randlength;
+int j;
 
-/* 
-* to ensure different numbers generated
+/* to ensure different numbers generated
 * each time the code runs link
 *random number generator with current time
 */
 srand(time(NULL));
-
 /* Generate 50 random words */
 for (count_rand_words = 1; count_rand_words <= 50; count_rand_words++)
 {
-/* Generate a random length for 
+/* Generate a random length for
 *rand word between 1 and MAX_LENGTH
 */
 randlength = (rand() % max_length) + 1;
 /* Generate random letters for the word
 * with random length given above
 */
-for (int j = 0; j < randlength; j++)
+for (j = 0; j < randlength; j++)
 {
 word[j] = charset[rand() % 62];
 }
