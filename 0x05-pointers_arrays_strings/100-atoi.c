@@ -7,25 +7,20 @@
 */
 int _atoi(char *s)
 {
-int i, j, extracted_num, sign;
+int j, extracted_num, sign;
 
-i = 0;
 extracted_num = 0;
 sign = 1;
 /* Skip any leading non-numeric characters */
-while ((*(s + i) < '0' || *(s + i) > '9') && (*(s + i) != '\0'))
+while ((*(s + j) >= '0') && (*(s + j) <= '9'))
 {
-if (*(s + i) == '-')
+/* check if a negative sign before the number*/
+if (*(s + j - 1) == '-' && sign > 0)
 {
 sign *= -1;
 }
-i++;
-}
 /* Convert numeric characters to integer */
-j = i;
-while ((*(s + j) >= '0') && (*(s + j) <= '9'))
-{
-extracted_num = extracted_num * 10 + sign * (*(s + j) -'0');
+extracted_num = extracted_num * 10 + (*(s + j) -'0');
 /*
 *first: extracted_num * 10 shifts
 *old numbers to left to add new
@@ -39,5 +34,5 @@ extracted_num = extracted_num * 10 + sign * (*(s + j) -'0');
 */
 j++;
 }
-return (extracted_num);
+return (sign * extracted_num);
 }
