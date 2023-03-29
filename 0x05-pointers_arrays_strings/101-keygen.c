@@ -31,7 +31,6 @@ for (count_rand_words = 1; count_rand_words <= 500; count_rand_words++)
 *rand word between 1 and MAX_LENGTH
 */
 randlength = (rand() % max_length) + 1;
-randlength == 4;
 /* Generate random letters for the word
 * with random length given above
 */
