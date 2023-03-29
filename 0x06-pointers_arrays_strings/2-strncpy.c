@@ -19,7 +19,7 @@ dest++;
 y++;
 n--;
 }
-while (n - 1 > 0)
+while (n > 0)
 {
 *dest = '\0';
 src++;
@@ -27,6 +27,5 @@ dest++;
 y++;
 n--;
 }
-*dest = '\0';
 return (dest - y);
 }
