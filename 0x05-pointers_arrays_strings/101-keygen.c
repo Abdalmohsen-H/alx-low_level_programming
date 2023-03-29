@@ -45,7 +45,7 @@ word[j] = charset[rand() % 62];
 word[randlength] = '\0';
 
 /* Print the generated word */
-printf("Word %d: %s\n", count_rand_words, word);
+/*printf("Word %d: %s\n", count_rand_words, word);*/
 }
 
 return (0);
