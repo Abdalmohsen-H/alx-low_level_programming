@@ -46,8 +46,7 @@ word[randlength] = '\0';
 
 /* Print the generated word */
 /*printf("Word %d: %s\n", count_rand_words, word);*/
-printf("%s",word)
+printf("%s",word);
 }
-
 return (0);
 }
