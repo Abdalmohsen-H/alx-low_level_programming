@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stddef.h>
 /**
  * print_array - prints n elements of array of integers
  * @a: integer pointer parameter
@@ -23,5 +21,5 @@ printf("%d", a[i]);
 }
 i++;
 }
-_putchar('\n');
+printf"\n");
 }
