@@ -10,7 +10,7 @@ int main(void)
 /* all available chars to use */
 char charset[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 /* Maximum length of generated words */
-ddint max_length = 10;
+int max_length = 10;
 /* hold generated word, +1 to hold '\0' */
 char word[11];
 /* define number of rand words*/
