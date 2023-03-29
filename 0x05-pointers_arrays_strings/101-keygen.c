@@ -24,8 +24,8 @@ int j;
 *random number generator with current time
 */
 srand(time(NULL));
-/* Generate 500 random words */
-for (count_rand_words = 1; count_rand_words <= 500; count_rand_words++)
+/* Generate 50000 random words */
+for (count_rand_words = 1; count_rand_words <= 50000; count_rand_words++)
 {
 /* Generate a random length for
 *rand word between 1 and MAX_LENGTH
