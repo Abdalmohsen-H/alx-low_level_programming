@@ -10,18 +10,17 @@
  */
 void print_array(int *a, int n)
 {
-int i = 1;
-while (i <= n && a != NULL && n > 0)
+int i = 0;
+while (i < n)
 {
-if (i <= n - 1)
+if (i <= n - 2)
 {
-printf("%d, ", *a);
+printf("%d, ", a[i]);
 }
-else if (i == n)
+else if (i == n - 1)
 {
-printf("%d\n", *a);
+printf("%d\n", a[i]);
 }
-a++;
 i++;
 }
 }
