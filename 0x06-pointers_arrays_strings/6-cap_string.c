@@ -1,18 +1,30 @@
 #include "main.h"
 /**
- * string_toupper - convert lowercase
- * letters of a string to uppercase
+ * cap_string - convert first lowercase
+ * letter of word to uppercas
  * @c: input string
  * Return: convertaed string
  */
-char *string_toupper(char *c)
+char *cap_string(char *c)
 {
-int i =0;
+int i = 0;
+int prvconverted = 0;
+
 while (*(c + i) != '\0')
 {
-if(*(c + i) >= 'a' && *(c + i) <= 'z')
+if (*(c + i) >= 'a' && *(c + i) <= 'z')
 {
-*(c + i) = *(c + i) -32;
+if (prvconverted == 0 && !(*(c + i - 1) >= 'A' && *(c + i - 1) <= 'Z'
+			) && !(*(c + i - 1) >= 'a' && *(c + i - 1) <= 'z'))
+{
+*(c + i) = *(c + i) - 32;
+prvconverted = 1;
+}
+}
+if (!(*(c + i) >= 'A' && *(c + i) <= 'Z'
+			) && !(*(c + i) >= 'a' && *(c + i) <= 'z'))
+{
+prvconverted = 0;
 }
 i++;
 }
