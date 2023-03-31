@@ -32,6 +32,10 @@ if (!(*(c + i) >= 'A' && *(c + i) <= 'Z'
 {
 prvconverted = 0;
 }
+if (*(c + i) == '\t')
+{
+*(c + i) = ' ';
+}
 i++;
 }
 return (c);
