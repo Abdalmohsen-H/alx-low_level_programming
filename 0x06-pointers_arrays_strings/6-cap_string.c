@@ -1,46 +1,38 @@
 #include "main.h"
 #include <ctype.h>
+#include <string.h>
+#include <stddef.h>
 /**
  * cap_string - convert first lowercase
  * letter of word to uppercas
- * @c: input string
+ * @str: input string
  * Return: convertaed string
  */
-char *cap_string(char *c)
+char *cap_string(char *str)
 {
 int i = 0;
-int prvconverted = 0;
-/*int separator[] = {9, 10, 32, 33, 34, 40, 41, 44, 46, 59, 63, 123, 125};*/
-/*int j = 0;*/
-
-while (*(c + i) != '\0')
+int j;
+/* Find length of input string */
+while (str[i] != '\0')
 {
-if (*(c + i) >= 'a' && *(c + i) <= 'z')
-{
-if (prvconverted == 0 && !(*(c + i - 1) >= 'A' && *(c + i - 1) <= 'Z'
-			) && !(*(c + i - 1) >= 'a' && *(c + i - 1) <= 'z'))
-{
-if ((isspace(*(c + i - 1)) || ispunct(*(c + i - 1))) && *(c + i - 1) != '-')
-{
-*(c + i) = *(c + i) - 32;
-prvconverted = 1;
-}
-}
-}
-if (!(*(c + i) >= 'A' && *(c + i) <= 'Z'
-			) && !(*(c + i) >= 'a' && *(c + i) <= 'z'))
-{
-prvconverted = 0;
-}
-if (*(c + i) == '\t')
-{
-*(c + i) = ' ';
-}
-if (c[0] >= 'a' && c[0] <= 'z')
-{
-c[0] = c[0] + 32;
-}
 i++;
 }
-return (c);
+/* Capitalize first letter on each word */
+for (j = 0; j < i; j++)
+{
+/*search for a character in a string*/
+if (strchr(" \t\n,.!?\"(){};", str[j]) != NULL)
+{
+if (str[j + 1] >= 'a' && str[j + 1] <= 'z')
+{
+str[j + 1] -= 32;
+}
+}
+}
+/* Capitalize the first letter of the string */
+if (str[0] >= 'a' && str[0] <= 'z')
+{
+str[0] -= 32;
+}
+return (str);
 }
