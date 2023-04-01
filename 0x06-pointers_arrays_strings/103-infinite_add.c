@@ -41,7 +41,7 @@ else
 	carry = 0;
 result[i] = sum + '0';
 }
-if (len1 == len2)
+if (len1 == len2 && i < 3)
 	i = i - 1;
 for (j = 0; j < i / 2; j++)
 {
