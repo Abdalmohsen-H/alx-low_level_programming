@@ -19,6 +19,5 @@ else if (n % 5 == 0)
 else
 	printf("%d\t", n);
 }
-printf("\n");
 return (1);
 }
