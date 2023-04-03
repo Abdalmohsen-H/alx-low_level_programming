@@ -11,16 +11,16 @@ int n;
 for (n = 1;  n <= 100; n++)
 {
 if (n % 3 == 0 && n % 5 == 0)
-	printf("FizzBuzz\t");
+	printf("FizzBuzz ");
 else if (n % 3 == 0)
-	printf("Fizz\t");
+	printf("Fizz ");
 else if (n % 5 == 0)
 	if (n == 100)
 		printf("Buzz");
 	else
-		printf("Buzz\t");
+		printf("Buzz ");
 else
-	printf("%d\t", n);
+	printf("%d ", n);
 }
 printf("\n");
 return (0);
