@@ -2,7 +2,7 @@
 /**
  * main - fuzz buzz numbers
  *
- * Return: Always 1.
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -19,5 +19,5 @@ else if (n % 5 == 0)
 else
 	printf("%d\t", n);
 }
-return (1);
+return (0);
 }
