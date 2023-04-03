@@ -15,9 +15,13 @@ if (n % 3 == 0 && n % 5 == 0)
 else if (n % 3 == 0)
 	printf("Fizz\t");
 else if (n % 5 == 0)
-	printf("Buzz\t");
+	if (n = 100)
+		printf("Buzz");
+	else
+		printf("Buzz\t");
 else
 	printf("%d\t", n);
 }
+printf("\n");
 return (0);
 }
