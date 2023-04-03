@@ -5,23 +5,14 @@
  */
 void print_number(int n)
 {
-unsigned int num = n;
-int div = 10;
+unsigned int number = n;
 
 if (n < 0)
 {
 _putchar('-');
-num = -num;
+number = -number;
 }
-while ((num / div) >= 1)
-{
-div *= 10;
-}
-div = div / 10;
-while (div > 0)
-{
-_putchar((num / div) + '0');
-num = num % div;
-div = div / 10;
-}
+if ((number / 10) > 0)
+	print_number(number / 10);
+_putchar((number % 10) + '0');
 }
