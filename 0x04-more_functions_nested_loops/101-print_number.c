@@ -20,7 +20,7 @@ div *= 10;
 div = div / 10;
 while (div > 0)
 {
-_putchar((num / div + '0');
+_putchar((num / div) + '0');
 num = num % div;
 div = div / 10;
 }
