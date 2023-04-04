@@ -1,17 +1,20 @@
 #include "main.h"
 /**
  * _strstr - find a word in sting
- * @s: input string
- * @findword: search word
+ * @haystack: input string
+ * @needle: search word
  * Return: pointer to char in input string
  * if findword found, else NULL
  */
-char *_strstr(char *s, char *findword)
+char *_strstr(char *haystack, char *needle)
 {
 int found = 0;
 int ctr = 0;
 int ctr2;
 int frstmtch = 0;
+char *s = haystack;/*char pointer to haystack*/
+char *findword = needle;/*char ptr to needle*/
+
 
 while (*(s + ctr) != '\0')
 {
