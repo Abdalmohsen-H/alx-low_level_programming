@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * _strstr - find a word in sting
- * @s: input string
- * @findword: search word
+ * @haystack: input string
+ * @needle: search word
  * Return: pointer to char in input string
  * if findword found, else NULL
  */
