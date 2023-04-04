@@ -12,18 +12,18 @@ int found = 0;
 int ctr = 0;
 int ctr2;
 
-while (*(s+ctr) != '\0')
+while (*(s + ctr) != '\0')
 {
-for (ctr2 = 0; *(accept+ctr2) != '\0'; ctr2++)
+for (ctr2 = 0; *(accept + ctr2) != '\0'; ctr2++)
 {
-if (*(s+ctr) == *(accept+ctr2))
+if (*(s + ctr) == *(accept + ctr2))
 {
 found += 1;
 break;
 }
 }
 /* no match found, stop searching */
-if (*(accept+ctr2) == '\0')
+if (*(accept + ctr2) == '\0')
 	break;
 ctr++;
 }
