@@ -26,5 +26,5 @@ return (s + ctr);
 }
 if  (*(s + ctr) != c)
 return (NULL);
-return ('s');
+return (s);
 }
