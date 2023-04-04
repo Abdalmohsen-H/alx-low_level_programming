@@ -9,21 +9,13 @@
  */
 char *_strchr(char *s, char c)
 {
-int found = 0;
-int ctr = 0;
-
-while (*(s + ctr) != '\0')
+while (*s != '\0')
 {
-if (found == 0 && *(s + ctr) == c)
+if (*s == c)
 {
 return (s + ctr);
 }
-ctr++;
+s++;
 }
-if (found == 1)
-{
-return (s + ctr);
-}
-else
-	return ('\0');
+return ('\0');
 }
