@@ -19,4 +19,5 @@ s++;
 }
 if (*s != c)
 	return ('\0');
+return (s)
 }
