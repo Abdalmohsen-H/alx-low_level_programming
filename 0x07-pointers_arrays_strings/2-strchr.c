@@ -16,8 +16,7 @@ while (*(s + ctr) != '\0')
 {
 if (found == 0 && *(s + ctr) == c)
 {
-found = 1;
-break;
+return (s + ctr);
 }
 ctr++;
 }
