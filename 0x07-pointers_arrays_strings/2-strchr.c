@@ -4,20 +4,27 @@
  * in a string, first occurrence,
  * also prints from found till end of string
  * @s: input string
- * @c: charcter to seach for
+ * @c: charcter to seach for 
  * Return: address if found, else NULL
  */
 char *_strchr(char *s, char c)
 {
-while (*s != '\0')
+int found = 0;
+int ctr = 0;
+while (*(s + ctr) != '\0')
 {
-if (*s == c)
+if (found == 0 && *(s + ctr) == c)
 {
-return (s);
+found = 1;
+break;
 }
-s++;
+ctr++;
 }
-if (*s != c)
-	return ('\0');
-return (s);
+if (found == 1)
+{
+return (s + ctr);
+}
+if  (*(s + ctr) != c)
+return (NULL);
+return ('s');
 }
