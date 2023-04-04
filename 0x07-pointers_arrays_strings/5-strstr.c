@@ -15,7 +15,10 @@ char *s = haystack;/*char pointer to haystack*/
 char *findword = needle;/*char ptr to needle*/
 int allfound = 0;
 
-
+if (*(findword) == '\0')
+{
+	return (s);
+}
 while (*(s + ctr) != '\0')
 {
 if (*(s + ctr) == *(findword) && *(findword) != '\0')
