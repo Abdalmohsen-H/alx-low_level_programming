@@ -33,8 +33,5 @@ if (found == 1)
 	break;
 ctr++;
 }
-if (found == 0)
-	return ('\0');
-/*printf("Final count: %d\n", found);*/
-return (s+ctr);
+return ('\0');
 }
