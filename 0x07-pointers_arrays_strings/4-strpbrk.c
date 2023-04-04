@@ -18,7 +18,7 @@ while (*(s + ctr) != '\0')
 {
 for (ctr2 = 0; *(accept + ctr2) != '\0'; ctr2++)
 {
-if (*(s+ctr) == *(accept + ctr2))
+if (*(s + ctr) == *(accept + ctr2))
 {
 found = 1;
 /*printf("Match found: %c\n", *(s + ctr));*/
