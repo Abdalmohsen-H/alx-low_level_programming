@@ -14,12 +14,12 @@ while (row < 8)
 column = 0;
 while (column < 8)
 {
-putchar(a[row][column]);
+_putchar(a[row][column]);
 column++;
 }
 if (row < 7)
 {
-putchar('\n');
+_putchar('\n');
 }
 row++;
 }
