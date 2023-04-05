@@ -17,10 +17,7 @@ while (column < 8)
 _putchar(a[row][column]);
 column++;
 }
-if (row < 7)
-{
 _putchar('\n');
-}
 row++;
 }
 }
