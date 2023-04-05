@@ -1,4 +1,4 @@
-#iclude "main.h"
+#include "main.h"
 /**
  * set_string - double pointer
  *
@@ -7,6 +7,6 @@
  */
 void set_string(char **s, char *to)
 {
-/*removed extr * because it means derefernce*
+/**removed extr * because it means derefernce*/
 *s = to;
 }
