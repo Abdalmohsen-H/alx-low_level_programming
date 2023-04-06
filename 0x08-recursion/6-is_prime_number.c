@@ -26,8 +26,8 @@ return (check_prime_number(n, base));
 }
 /**
  * check_prime_number - helper function
+ * @n: input number
  * @base: random number to check
- * @n:input number
  * Return: 1 if prime num ,else 0
  */
 int check_prime_number(int n, int base)
@@ -43,10 +43,8 @@ return (0);
 }
 if (base <= 1)
 {
-/**
-* it is a prime num this value (1)
-*will be the return of the recursion
-*/
+/* it is a prime num this value (1)*/
+/*will be the return of the recursion*/
 return (1);
 }
 base--;

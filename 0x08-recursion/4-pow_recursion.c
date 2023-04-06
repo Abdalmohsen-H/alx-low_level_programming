@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* factorial - Calculate base n raised
+* _pow_recursion - Calculate base n raised
 * to a power y, AKA (x ^ y).
 * @x: input base number.
 * @y: input power number.
