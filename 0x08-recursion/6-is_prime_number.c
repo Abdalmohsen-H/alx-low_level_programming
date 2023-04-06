@@ -38,10 +38,15 @@ x = n % base;
 if (x == 0 && base > 1)
 {
 /* not a prime number*/
+/*then return of the recursion = 0*/
 return (0);
 }
 if (base <= 1)
 {
+/**
+* it is a prime num this value (1)
+*will be the return of the recursion
+*/
 return (1);
 }
 base--;
