@@ -1,11 +1,20 @@
 #include "main.h"
-
 /**
- * _puts - short description
- * @*s;: input
- * Return: returns .
+ * _puts - rints a string, followed by a new line, to stdout
+ * @str: integer pointer parameter
+ * Return: void
+ *
  */
-void _puts(char *s)
+void _puts(char *str)
 {
-    /* TODO: Implement _puts function */
+	char x = (char) '\0';
+	char z;
+
+	while (*str != x)
+	{
+		z = *str;
+		_putchar(z);
+		str++;
+	}
+	_putchar('\n');
 }
