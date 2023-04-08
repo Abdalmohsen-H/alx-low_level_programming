@@ -9,6 +9,7 @@
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
+char *cc = "cc";
 /* TODO: Implement *_memcpy function */
-return ('c');
+return (cc);
 }
