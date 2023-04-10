@@ -1,6 +1,0 @@
-#!/bin/bash
-
-for file in *.c; do
-    # Remove semicolons after closing parentheses
-    sed -i 's/);/)/g' "$file"
-done
