@@ -26,8 +26,8 @@ else
 /* ctr start from 1 to get only passed args */
 for (ctr = 1; ctr <= (argc - 1) ; ctr++)
 {
-/* if it is a digit */
-if (atoi(argv[ctr]) != 0)
+/* if it is a digit and positive*/
+if (atoi(argv[ctr]) > 0)
 {
 sum_res += atoi(argv[ctr]);
 }
