@@ -11,8 +11,9 @@
 /* int main(int *argc, char **argv) */
 int main(int argc, char *argv[])
 {
-int sum_res;
+int sum_res = 0;
 int ctr;
+char *ch;
 
 /* argc == 1 equal to (argc-1) == 0 */
 /* because first arg , i.e. argv [0] */
@@ -26,23 +27,19 @@ else
 /* ctr start from 1 to get only passed args */
 for (ctr = 1; ctr <= (argc - 1) ; ctr++)
 {
-/* if it is a digit and positive*/
-if (atoi(argv[ctr]) > 0)
+/* check if it isn't a digit*/
+for (ch = argv[ctr]; *ch != '\0';  ch++)
 {
-sum_res += atoi(argv[ctr]);
-}
-/* else if arg is 0 */
-else if (*argv[ctr] == '0')
+if (*ch < '0' || *ch > '9')
 {
-continue;
-}
 /* argument not a digit */
-/* atoi of non digit is undefined */
-else
-{
 printf("Error\n");
 return (1);
 }
+}
+/*printf("arg%d:%d , sum %d\n", ctr, atoi(argv[ctr]), sum_res);*/
+/* the argument is a digit then add it*/
+sum_res += atoi(argv[ctr]);
 }
 printf("%d\n", sum_res);
 }
