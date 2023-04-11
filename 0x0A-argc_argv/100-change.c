@@ -12,7 +12,6 @@
 /* int change_coins(int *argc, char **argv) */
 int main(int argc, char *argv[])
 {int total_coins = 0, cents;
-char *ch;
 
 /* if pased arguments count not one */
 if ((argc - 1) != 1) /*or argc != 2*/
