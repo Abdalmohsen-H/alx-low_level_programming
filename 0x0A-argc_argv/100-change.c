@@ -22,7 +22,7 @@ return (1);
 /* check if input's negative or not a digit*/
 for (ch = argv[1];  *ch <= '0' || *ch >= '9';  ch++)
 {printf("0\n");/*input not a digit or -ve (start with "-")*/
-return (0);
+return (1);
 }
 cents = atoi(argv[1]);/*argument is a digit then calculate*/
 while (cents > 0)
