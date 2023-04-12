@@ -3,7 +3,7 @@
 /* #include <stdio.h> */
 #include <string.h>
 /**
- * create_array -  concatenates two strings
+ * str_concat -  concatenates two strings
  * on new allocated memory space
  * @s1: input string 1
  * @s2: input string 2
@@ -12,7 +12,7 @@
 char *str_concat(char *s1, char *s2)
 {
 char *outarr;
-int length1 = 0,length2 = 0, i = 0;
+int length1 = 0, length2 = 0, i = 0;
 
 if (s1 == NULL)
 	s1 = "\0";
