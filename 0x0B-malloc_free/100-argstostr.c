@@ -30,10 +30,10 @@ return (NULL);
 }
 for (j = 1; j < ac; j++)
 {
-while (strlen(av[j]) > 0 && av[j] != '\0')
+while (strlen(av[j]) > 0 && *av[j] != '\0')
 {
 outarr[i] = *s1;
-*av[j]++;
+av[j]++;
 length1--;
 i++;
 }
