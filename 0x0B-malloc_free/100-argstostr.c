@@ -17,7 +17,7 @@ int size = 1;
 
 if (ac == 0 || av == NULL)
 return (NULL);
-for (j = 1; j < ac; j++)
+for (j = 0; j < ac; j++)
 {
 if (av[j] == NULL)
 	av[j] = "\0";
