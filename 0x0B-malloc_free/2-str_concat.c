@@ -14,10 +14,10 @@ char *str_concat(char *s1, char *s2)
 char *outarr;
 int length1 = 0,length2 = 0, i = 0;
 
-if (s1 == NULL && s2 ==NULL)
-{
-return (NULL);
-}
+if (s1 == NULL)
+	s1 = "\0";
+if (s2 == NULL)
+	s2 = "\0";
 length1 = strlen(s1);
 length2 = strlen(s2);
 outarr = malloc((length1 + length2 + 1) * sizeof(char));
