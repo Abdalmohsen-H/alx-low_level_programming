@@ -39,6 +39,7 @@ i++;
 k--;
 }
 outarr[i] = '\n';
+i++;
 }
 return (outarr);
 }
