@@ -21,7 +21,7 @@ length++;
 }
 i = 0;
 outarr = malloc((length + 1) * sizeof(char));
-if (*str == NULL || outarr == NULL)
+if (str == NULL || outarr == 0)
 {
 return (NULL);
 }
