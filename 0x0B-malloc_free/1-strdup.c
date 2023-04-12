@@ -21,11 +21,11 @@ length++;
 }
 i = 0;
 outarr = malloc((length + 1) * sizeof(char));
-if (str == NULL || outarr == 0)
+if (str == NULL || outarr == 0 || outarr == NULL || length == 0)
 {
 return (NULL);
 }
-while (length > 0 && *str != '\0')
+while (length > 0)
 {
 outarr[i] = *str;
 str++;
