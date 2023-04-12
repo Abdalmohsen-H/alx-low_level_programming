@@ -3,7 +3,7 @@
 #include <stdio.h>
 /* #include <string.h>*/
 /**
- * create_array - copy input string on new
+ * _strdup - copy input string on new
  * allocated memory space
  * @str: array size
  * Return: pointer to new space, Else NULL
