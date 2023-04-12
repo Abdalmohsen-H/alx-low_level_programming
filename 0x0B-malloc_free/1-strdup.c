@@ -11,14 +11,14 @@
 char *_strdup(char *str)
 {
 char *outarr;
-int length =0, i = 0;
+int length = 0, i = 0;
 
 if (str == NULL)
 {
 return (NULL);
 }
 /* length = strlen(str);*/
-while(*(str+i) != '\0')
+while (*(str + i) != '\0')
 {
 i++;
 length++;
