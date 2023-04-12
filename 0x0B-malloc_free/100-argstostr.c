@@ -9,7 +9,7 @@
  * @av: argv
  * Return: pointer to new space, Else NULL
  */
-char *argstostr(int ac, char **av);
+char *argstostr(int ac, char **av)
 {
 char *outarr;
 int length1 = 0, length2 = 0, i = 0, j;
