@@ -21,7 +21,7 @@ for (j = 0; j < ac; j++)
 {
 if (av[j] == NULL)
 	av[j] = "\0";
-size += strlen(av[j]);
+size += (strlen(av[j]) + 1);
 }
 outarr = malloc(size *sizeof(char));
 if (outarr == NULL)
