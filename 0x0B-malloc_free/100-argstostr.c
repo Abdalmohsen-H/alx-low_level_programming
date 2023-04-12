@@ -28,7 +28,7 @@ if (outarr == NULL)
 {
 return (NULL);
 }
-for (j = 1; j < ac; j++)
+for (j = 0; j < ac; j++)
 {
 k = strlen(av[j]);
 while (k > 0 && *av[j] != '\0')
