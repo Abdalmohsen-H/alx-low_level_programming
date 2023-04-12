@@ -12,7 +12,7 @@
 char *argstostr(int ac, char **av)
 {
 char *outarr;
-int length1 = 0, length2 = 0, i = 0, j;
+int i = 0, j;
 int size = 1;
 
 if (ac == 0 || av == NULL)
@@ -32,7 +32,7 @@ for (j = 1; j < ac; j++)
 {
 while (strlen(av[j]) > 0 && *av[j] != '\0')
 {
-outarr[i] = *s1;
+outarr[i] = *av[j];
 av[j]++;
 length1--;
 i++;
