@@ -13,7 +13,7 @@ void *reserv;
 reserv = malloc(b);
 if (!reserv)
 {
-return (98);
+exit (98);
 }
 return (reserv);
 }
