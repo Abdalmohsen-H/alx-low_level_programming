@@ -1,4 +1,4 @@
-#include "mainh"
+#include "main.h"
 #include <stdlib.h>
 /**
 * _realloc - use malloc and free (only)
