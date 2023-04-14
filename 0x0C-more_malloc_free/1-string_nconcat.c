@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 /**
  * string_nconcat -  concatenates two strings
  * on new allocated memory space
@@ -11,7 +12,8 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 char *outarr;
-int length1 = 0, length2 = 0, i = 0;
+unsigned int length1 = 0, length2 = 0;
+int i = 0;
 
 if (s1 == NULL)
 {s1 = "\0";
