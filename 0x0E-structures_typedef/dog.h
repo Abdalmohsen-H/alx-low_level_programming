@@ -3,17 +3,19 @@
 
 /**
 * struct dog - define struct dog
-*@name - dog name
-*@age - dog age
-*@owner - owner name
+*@name: dog name
+*@age: dog age
+*@owner: owner name
+*
 *Description: long desc.
 */
 
 struct dog
 {
-	ch *name;
+	char *name;
 	float age;
-	ch *owner;
+	char *owner;
 };
+void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif
