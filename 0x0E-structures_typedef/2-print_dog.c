@@ -3,7 +3,6 @@
 /**
  * print_dog - print struct dog
  * @d: pointer for dog dtruct
- * @owner: dog owner
  */
 void print_dog(struct dog *d)
 {
