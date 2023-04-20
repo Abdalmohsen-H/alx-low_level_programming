@@ -20,7 +20,7 @@ return;
 }
 /* intialiaze getargs list*/
 va_start(getargs, n);
-for (counter = n; counter > 1; counter--)
+for (counter = n; counter > 0; counter--)
 {
 if (getargs != '\0')
 {printf("%s", va_arg(getargs, char *));
@@ -28,12 +28,14 @@ if (getargs != '\0')
 else
 {printf("(nil)");
 }
-if (separator)
+if (separator && counter > 1)
 {
 printf("%s", separator);
 }
+if (counter == 1)
+{printf("\n");
 }
-printf("%s\n", va_arg(getargs, char *));
+}
 /* free getargs*/
 va_end(getargs);
 }
