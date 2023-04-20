@@ -18,9 +18,9 @@ if (array && cmp && size > 0)
 for (k = 0; k < size; k++)
 {
 /* Compare element with cmp function */
-if (cmp(array[i]) != 0)
+if (cmp(array[k]) != 0)
 /* Return index of first match */
-{return (i);
+{return (k);
 }
 }
 }
