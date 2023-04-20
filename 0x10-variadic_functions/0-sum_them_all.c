@@ -3,7 +3,6 @@
 /**
 * sum_them_all - returns sum of all inputs (args)
 * @n: count of args
-* @...: accept unknown number of inputs
 * Return: integer sum of all inputs
 */
 int sum_them_all(const unsigned int n, ...)
