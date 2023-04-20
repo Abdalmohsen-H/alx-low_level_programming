@@ -15,7 +15,7 @@ int counter;
 /* if n==0 return*/
 if (!n)
 {
-printf("\n")
+printf("\n");
 return;
 }
 /* intialiaze getargs list*/
@@ -25,7 +25,7 @@ for (counter = n; counter > 1; counter--)
 printf("%d", va_arg(getargs, int));
 if (separator)
 {
-printf("%c ",*separator);
+printf("%c ", *separator);
 }
 }
 printf("%d\n", va_arg(getargs, int));
