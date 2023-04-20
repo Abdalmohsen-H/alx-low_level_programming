@@ -15,6 +15,7 @@ int counter;
 /* if n==0 return*/
 if (!n)
 {
+printf("\n")
 return;
 }
 /* intialiaze getargs list*/
