@@ -11,6 +11,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 va_list getargs;
 int counter;
+char *temp;
 
 /* if n==0 return*/
 if (!n)
@@ -22,8 +23,9 @@ return;
 va_start(getargs, n);
 for (counter = n; counter > 0; counter--)
 {
-if (getargs != '\0')
-{printf("%s", va_arg(getargs, char *));
+temp = va_arg(getargs, char *);
+if (temp)
+{printf("%s", temp);
 }
 else
 {printf("(nil)");
