@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
 * main - prints the opcodes of its own main function
-*only one single input is accepted
+* only one single input is accepted
 * @argc: argument count
 * @argv: argument vector (array of args values)
 *
@@ -17,7 +18,7 @@ char *opcodes;
 if (argc != 2)
 {
 printf("Error\n");
-return (1);
+exit(1);
 }
 /*convert argument to int*/
 bytes_format = atoi(argv[1]);
@@ -25,11 +26,11 @@ bytes_format = atoi(argv[1]);
 if (bytes_format < 0)
 {
 printf("Error\n");
-return (2);
+exit(2);
 }
 /*cast main function to a char pointer */
 /* pointer function */
-opcodes = (char *) main;
+opicodes = (char *) main;
 /* loop opcodes then print in hexadecimal*/
 for (index = 0; index < bytes_format ; index++)
 {
