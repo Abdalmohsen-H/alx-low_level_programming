@@ -10,7 +10,7 @@
 */
 int main(int argc, char **argv)
 {
-int bytes, index
+int bytes_format, index;
 char *opcodes;
 
 /*check if valid number of arguments*/
