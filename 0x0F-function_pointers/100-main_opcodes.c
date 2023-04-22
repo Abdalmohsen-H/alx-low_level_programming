@@ -30,7 +30,7 @@ exit(2);
 }
 /*cast main function to a char pointer */
 /* pointer function */
-opicodes = (char *) main;
+opcodes = (char *) main;
 /* loop opcodes then print in hexadecimal*/
 for (index = 0; index < bytes_format ; index++)
 {
