@@ -35,7 +35,11 @@ opcodes = (char *) main;
 for (index = 0; index < bytes_format ; index++)
 {
 /* %hhx : printing chars in hexadecimal*/
-printf("%02hhx ", opcodes[index]);
+printf("%02hhx", opcodes[index]);
+if (index < (bytes_format - 1))
+{
+printf(" ");
+}
 }
 printf("\n");
 return (0);
