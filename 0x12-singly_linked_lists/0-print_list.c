@@ -17,20 +17,19 @@
 size_t print_list(const list_t *h)
 {
 	size_t nodecount = 0;
-	char *string;
-	unsigned int length;
 
 	/* condithion h, means if node exist (True)*/
 	/* then loop linked list again, still unfinished*/
 	for (; h; nodecount++)
 	{
-		string = h->str;
-		length = h->len;
 		if (!(h->str))
-		{string = "(nil)";
-			length = 0;
+		{
+			printf("[%d] %s\n", 0, "(nil)");
 		}
-		printf("[%d] %s\n", length, string);
+		else
+		{
+			printf("[%d] %s\n", h->len, h->str);
+		}
 		h = h->next;
 	}
 	return (nodecount);
