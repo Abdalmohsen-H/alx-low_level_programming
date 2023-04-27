@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * print_list - return list length (AKA number of nodes)
+ * list_len - return list length (AKA number of nodes)
  *
  * @h: pointer to head of linked list (first node)
  * this is very important to define this list
