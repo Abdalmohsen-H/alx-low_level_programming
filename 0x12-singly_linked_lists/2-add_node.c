@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * add_node - add node to singly linked list
+ * add_node - add node at beginning of singly linked list
  * @str: string - (malloc'ed string)
  * @head: pointer of pointer to head node
  *
