@@ -21,7 +21,7 @@ size_t print_list(const list_t *h)
 	unsigned int length;
 
 	/* condithion h, means if node exist (True)*/
-        /* then loop linked list again, still unfinished*/
+	/* then loop linked list again, still unfinished*/
 	for (; h; nodecount++)
 	{
 		string = h->str;
