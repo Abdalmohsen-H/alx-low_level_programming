@@ -6,9 +6,9 @@ section .text
     ; Declare the printf function as external
     extern printf
     ; Declare the entry point of the program
-    global main_func
+    global main
 
-main_func:
+main:
     ; Load the address of the message string into the EDI register
     mov edi, my_message
     ; move Zero into EAX register which represent the 0 return of printf
