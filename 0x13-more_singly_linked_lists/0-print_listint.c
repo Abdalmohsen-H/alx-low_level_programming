@@ -16,14 +16,14 @@
  */
 size_t print_listint(const listint_t *h)
 {
-size_t nodecount = 0;
+	size_t nodecount = 0;
 
-/* condithion h, means if node exist (True)*/
-/* then loop linked list again, still unfinished*/
-for (; h; nodecount++)
-{
-printf("%d\n", h->n);
-h = h->next;
-}
-return (nodecount);
+	/* condition h, means if node exist (True)*/
+	/* then loop linked list again, still unfinished*/
+	for (; h; nodecount++)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+	}
+	return (nodecount);
 }
