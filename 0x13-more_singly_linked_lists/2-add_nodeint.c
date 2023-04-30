@@ -16,7 +16,12 @@ int idx = 0;
 list_t *newnode;
 
 if (str == NULL || !head)
-	return (NULL);
+return (NULL);
+newnode = malloc(sizeof(list_t));
+if (newnode == NULL)
+{
+return (NULL);
+}
 newnode->n = n;
 newnode->next = *head;
 *head = newnode;
