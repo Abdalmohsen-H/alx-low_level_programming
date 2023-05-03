@@ -12,7 +12,7 @@
  * or NULL if it failed
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
-{listint_t *current, *newnode;
+{listint_t *current, *newnode, *previousnode;
 	unsigned int listindex = 0;
 
 	newnode = malloc(sizeof(listint_t));
@@ -45,9 +45,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		listindex++;/* we now on the next node */
 	}
 	if (listindex == idx)/*we reached last node of it*/
-	{previousnode->next = newnode;
-		newnode->next = current;
-		return (current);
+	{newnode->next = current;
+		previousnode->next = newnode;/*I prefer previousnode->next over current->next*/
+		return (current);/*as order won't matter ,but when using current order matters*/
 	}
 	return (NULL);
 }
