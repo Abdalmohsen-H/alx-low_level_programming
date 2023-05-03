@@ -1,4 +1,5 @@
 #ifndef linklist2_h
+
 #define linklist2_h
 
 #include <stddef.h>
@@ -26,5 +27,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n);
 void free_listint(listint_t *head);
 void free_listint2(listint_t **head);
 int _putchar(char c);
+int pop_listint(listint_t **head);
 
 #endif
