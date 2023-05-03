@@ -16,14 +16,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	unsigned int listindex = 0;
 
 	newnode = malloc(sizeof(listint_t));
-	if (!newnode)
+	if (!newnode ||  *head == NULL)
 	{free(newnode);
 		return (NULL);
 	}
 	newnode->n = n;
 	newnode->next = NULL;
-	if (head == NULL) /*list is NULL (no nodes)*/
-		return (NULL);
 	current = *head;/*list have nodes and *head is the first node*/
 	/* check if 1st is also last node before go through list*/
 	if (current->next == NULL && idx == 0)/*if true u must refer to *head inside*/
