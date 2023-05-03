@@ -12,7 +12,7 @@
  * or NULL if it failed
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
-{listint_t *current, *newnode, *previousnode;
+{listint_t *current, *newnode;
 	unsigned int listindex = 0;
 
 	newnode = malloc(sizeof(listint_t));
@@ -26,9 +26,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 	current = *head;/*list have nodes and *head is the first node*/
 	/* check if 1st is also last node before go through list*/
-	if (current->next == NULL && idx == 0)
-	{newnode->next = current;
-		*head = newnode;
+	if (current->next == NULL && idx == 0)/*if true you must refer to *head* inside*/
+	{newnode->next = *head;/*very important don't use current here*/
+		*head = newnode;/*we save *head values in previous step*/
 		return (newnode);
 	}
 	else if (current->next == NULL && idx > 0)/* index not found on list*/
@@ -49,6 +49,5 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		newnode->next = current;
 		return (current);
 	}
-	free(newnode);
 	return (NULL);
 }
