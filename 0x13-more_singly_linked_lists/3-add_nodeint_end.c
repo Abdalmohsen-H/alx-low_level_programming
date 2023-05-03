@@ -14,9 +14,13 @@
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *newnode;
+	listint_t *current;
 
 	newnode = malloc(sizeof(listint_t));
 	if (newnode == NULL)
+		return (NULL);
+	current = malloc(sizeof(listint_t));
+	if (current == NULL)
 		return (NULL);
 	newnode->n = n;
 	if (*head == NULL) /*list still NULL (no nodes)*/
@@ -26,7 +30,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		/*till we add extra nodes*/
 	}
 	else /*the list already have nodes*/
-	{listint_t *current = *head;/*then *head is the first node*/
+	{current = *head;/*then *head is the first node*/
 		/* check if this lsat node in list before add newnode*/
 		while (current->next != NULL)
 		{/* then loop till you go to last node of List*/
