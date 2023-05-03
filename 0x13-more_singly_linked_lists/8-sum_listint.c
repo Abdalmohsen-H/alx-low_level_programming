@@ -12,25 +12,24 @@
  */
 int sum_listint(listint_t *head)
 {
-	listint_t *newnode;
 	listint_t *current;
 	unsigned int sum = 0;
 
-	if (*head == NULL) /*list still NULL (no nodes)*/
+	if (head == NULL) /*list still NULL (no nodes)*/
 	{
 		return (0);
 	}
 	else /*the list already have nodes*/
-	{current = *head;/*then *head is the first node*/
+	{current = head;/*then *head is the first node*/
 		while (current->next != NULL)
 		{/* then loop till and get sum or list ends*/
-			sum += (current->n)
-				/* AKA loop to traverse a linked list data structure.*/
-				current = current->next;
+			sum += (current->n);
+			/* AKA loop to traverse a linked list data structure.*/
+			current = current->next;
 			/* we now on the next node */
 		}
 		/*loop ended when we reached last node of it*/
-		sum += (current->n)
+		sum += (current->n);
 	}
 	return (sum);
 }
