@@ -22,7 +22,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	newnode->n = n;
 	newnode->next = NULL;
-	if (*head == NULL) /*list is NULL (no nodes)*/
+	if (head == NULL) /*list is NULL (no nodes)*/
 		return (NULL);
 	current = *head;/*list have nodes and *head is the first node*/
 	/* check if 1st is also last node before go through list*/
