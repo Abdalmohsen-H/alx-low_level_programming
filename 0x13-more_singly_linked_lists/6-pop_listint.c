@@ -14,14 +14,14 @@ int pop_listint(listint_t **head)
 	int nhead;
 	listint_t *oldhead;
 
-	if (!head || !(**head))
+	if (!head || !(*head))
 	{return (0);
 	}
 	/*save addres of old head node to free it later*/
 	oldhead = *head;
-	nhead = (*oldhead)->n;
+	nhead = oldhead->n;
 	/* move head pointer to next node */
 	*head = (*head)->next;
-	free(*oldhead);
+	free(oldhead);
 	return (nhead);
 }
