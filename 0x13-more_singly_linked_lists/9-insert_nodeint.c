@@ -28,6 +28,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/* check if 1st is also last node before go through list*/
 	if (current->next == NULL && idx == 0)
 	{newnode->next = current;
+		*head = newnode;
 		return (newnode);
 	}
 	else if (current->next == NULL && idx > 0)/* index not found on list*/
@@ -48,5 +49,5 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		newnode->next = current;
 		return (current);
 	}
-return (NULL);
+	return (NULL);
 }
