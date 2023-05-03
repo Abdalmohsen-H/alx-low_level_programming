@@ -1,3 +1,7 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
 /**
  * delete_nodeint_at_index - find if index exist on
  * singly linked list and delete new node
@@ -7,7 +11,7 @@
  * or -1 if deletion failed
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
-{listint_t *current, *newnode, *previous_node;
+{listint_t *current = NULL, *newnode = NULL , *previous_node = NULL;
 	unsigned int listindex = 0;
 
 	if  (head == NULL || *head == NULL)
