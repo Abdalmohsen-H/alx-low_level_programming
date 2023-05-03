@@ -33,20 +33,18 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	else if (current->next == NULL && idx > 0)/* index not found on list*/
 		return (NULL);
-	while (current->next != NULL)/*loop till you get match or list ends*/
-	{
-		if (listindex == idx)
-		{newnode->next = current->next;
-			current->next = newnode;
-			return (newnode);
+	while (current != NULL)
+	{/*loop till lis ends*/
+		if (listindex == idx - 1)/*node before matching index*/
+		{/*then link new to next node & add new node after current */
+			newnode->next = current->next;/*order of this block matters*/
+			current->next = newnode;/*this should happen in this order*/
+			return (newnode);/*to avoid losing data*/
 		}
-		current = current->next;/*moving to next node*/
+		current = current->next;
 		listindex++;/* we now on the next node */
 	}
-	if (listindex == idx)/*we reached last node of it*/
-	{newnode->next = current->next;/*this logic against task itself !!*/
-		current->next = newnode;/*but only way to pass checker !!*/
-		return (current);
-	}
+	/*loop ended without match, then index out of list range*/
+	free(newnode);/*then free newnode we won't add or use it*/
 	return (NULL);
 }
