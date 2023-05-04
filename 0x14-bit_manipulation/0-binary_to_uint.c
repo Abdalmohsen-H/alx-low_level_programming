@@ -7,7 +7,7 @@
  * else 0
  * there are 2ways to convert but one works just fine
  * because c doesn't have pow operator
- * 
+ *
  * decimal converted to binary by we dividing
  * decimal number by 2 repeatedly until we get 0,
  * and we keep track of the remainders to get the binary digits.
