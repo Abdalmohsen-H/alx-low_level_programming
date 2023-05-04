@@ -6,7 +6,9 @@
  * Return: converted Decimal unsigned int,
  * else 0
  * there are 2ways to convert but one works just fine
- * because c doesn't have pow operator
+ * this one is explained at end of description.
+ * because c only have pow function from math.h
+ * and it needs handling any error while compiling
  *
  * decimal converted to binary by we dividing
  * decimal number by 2 repeatedly until we get 0,
