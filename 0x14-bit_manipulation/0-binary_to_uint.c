@@ -1,40 +1,48 @@
-#include <math.h>
 #include <stdlib.h>
-#include <string.h>
 #include "main.h"
 /**
  * binary_to_uint - convert binary to unsigned int (decimal)
  * @b: input in binary
  * Return: converted Decimal unsigned int,
  * else 0
+ * there are 2ways to convert but one works just fine
+ * because c doesn't have pow operator
+ * 
+ * decimal converted to binary by we dividing
+ * decimal number by 2 repeatedly until we get 0,
+ * and we keep track of the remainders to get the binary digits.
+ * we are reversing the process now to return back to decimal
  */
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int decimal_res = 0;
-	unsigned int power = strlen(b) - 1;
 
+	/* Check if input string is NULL */
 	if (b == NULL)
-	{return (0);
+	{
+		return (0);
 	}
+	/* Loop input string till end*/
 	while (*b != '\0')
 	{
-		if (*b == '1')
+		/* If current char is '0', shift left by 1 bit */
+		if (*b == '0')
 		{
-			decimal_res = decimal_res + (unsigned int) pow(2, power);
-			/*printf("\ndec %u when power is %d\n",decimal_res, power );*/
-		} 
-		else if (*b != '0')
-		{/* Handle invalid character*/
-			/*putchar(*b);*/
+			decimal_res = decimal_res * 2;
+		}
+		/* If current char is '1', shift left by 1 bit and add 1 */
+		else if (*b == '1')
+		{
+			decimal_res = (decimal_res * 2) + 1;
+		}
+		/* If current char is not '0' or '1', input is invalid */
+		else
+		{
 			return (0);
 		}
+		/* Move to next char in input string */
 		b++;
-		power--;
 	}
-	/*another solution: while (*b != '\0') {*/
-	/*   if (*b == '0') {*/
-	/*    ul = res * 2;*/
-	/*} else if (*b == '1') {*/
-	/*  res = res * 2 + 1;}*/
+	/* Return decimal equivalent of binary input */
 	return (decimal_res);
 }
