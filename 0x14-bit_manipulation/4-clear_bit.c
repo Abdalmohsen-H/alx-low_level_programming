@@ -1,12 +1,12 @@
 /**
- * set_bit - set bit at given index to 1
+ * clear_bit - set bit at given index to 0
  * @n: input decimal number
  * @index:index from left starting from 0
  *
  * Return: 1 if setting the bit successed,
  * else -1.
  */
-int set_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int bitmask = 1, temp = 0;
 	unsigned int counter = 0;
@@ -16,8 +16,8 @@ int set_bit(unsigned long int *n, unsigned int index)
 	{
 		if (index == counter)
 		{
-			temp = (*n | bitmask);
-			if (temp & bitmask)
+			temp = (*n & (~bitmask));
+			if (!(temp & bitmask))
 			{
 				/*printf("n & bitmask: %lu", n & bitmask);*/
 				*n = temp;
@@ -26,7 +26,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 			else
 			{
 				/*printf("n & bitmask: %lu", n & bitmask);*/
-				return (-1); /*setting bit failed*/
+				return (-1);/*clearing failed*/
 			}
 		}
 		/*Shift mask one bit to the left as index from left*/
