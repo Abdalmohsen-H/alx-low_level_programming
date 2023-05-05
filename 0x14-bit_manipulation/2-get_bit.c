@@ -12,12 +12,6 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned long int bitmask = 1;
 	unsigned int counter = 0;
 
-	/* If the input is zero, print a single zero and return */
-	if (n == 0 && index == 0)
-		return (0);
-	if (n == 0 && index != 0)
-		return (-1);
-
 	/* Loop through all the bits of input number*/
 	while (bitmask > 0)
 	{
