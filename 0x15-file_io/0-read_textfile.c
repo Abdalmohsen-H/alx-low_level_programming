@@ -4,7 +4,7 @@
 #include <fcntl.h>
 #include "main.h"
 /**
- * read_textfile - func to read a text file then
+ * read_textfile - func to read a part of a text file then
  * prints it to standard output.
  *
  * @letters: input number of letters this func.
