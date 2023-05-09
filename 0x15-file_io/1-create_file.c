@@ -24,13 +24,16 @@ int create_file(const char *filename, char *text_content)
 	if (file_descriptor == -1) /*check if operation failed*/
 	{return (-1);/*failure*/
 	}
-	strlenght = strlen(text_content);
-	/* write text_content into above file description */
-	bytes_written_counter = write(file_descriptor, text_content, strlenght);
-	if (bytes_written_counter  == -1) /*if write operation failed*/
+	if (text_content != NULL)
 	{
-		close(file_descriptor);
-		return (-1);/*failure*/
+		strlenght = strlen(text_content);
+		/* write text_content into above file description */
+		bytes_written_counter = write(file_descriptor, text_content, strlenght);
+		if (bytes_written_counter  == -1) /*if write operation failed*/
+		{
+			close(file_descriptor);
+			return (-1);/*failure*/
+		}
 	}
 	close(file_descriptor);
 	return (1);/*success*/
