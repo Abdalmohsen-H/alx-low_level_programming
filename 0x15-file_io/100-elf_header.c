@@ -64,7 +64,7 @@ int main(int argscont, char *argsvec[])
 	}
 
 	printf("ELF Header:\n");/*just required info*/
-	printf("  Magic:");
+	printf("  Magic:   ");
 	prnt_hx_byts(ef_hdr.e_ident, EI_NIDENT);
 	printf("  Class:                             %s\n",
 			ef_hdr.e_ident[EI_CLASS] == ELFCLASS32 ?
