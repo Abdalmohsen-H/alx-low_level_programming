@@ -64,18 +64,25 @@ int main(int argscont, char *argsvec[])
 	}
 
 	printf("ELF Header:\n");/*just required info*/
-	printf("  Magic:   ");
+	printf("  Magic:");
 	prnt_hx_byts(ef_hdr.e_ident, EI_NIDENT);
-	printf("  Class:     %s\n", ef_hdr.e_ident[EI_CLASS] == ELFCLASS32 ?
+	printf("  Class:                             %s\n",
+			ef_hdr.e_ident[EI_CLASS] == ELFCLASS32 ?
 			"ELF32" : "ELF64");
-	printf("  Data:      %s\n", ef_hdr.e_ident[EI_DATA] == ELFDATA2LSB ?
+	printf("  Data:                              %s\n",
+			ef_hdr.e_ident[EI_DATA] == ELFDATA2LSB ?
 			"2's complement, little endian" : "Unknown");
-	printf("  Version:   %d (current)\n", ef_hdr.e_ident[EI_VERSION]);
-	printf("  OS/ABI:    %s\n", ef_hdr.e_ident[EI_OSABI] == ELFOSABI_SYSV ?
+	printf("  Version:                           %d (current)\n",
+			ef_hdr.e_ident[EI_VERSION]);
+	printf("  OS/ABI:                            %s\n",
+			ef_hdr.e_ident[EI_OSABI] == ELFOSABI_SYSV ?
 			"UNIX - System V" : "Unknown");
-	printf("  ABI Version: %d\n", ef_hdr.e_ident[EI_ABIVERSION]);
-	printf("  Type:      %s\n", gt_lf_typ_strn(ef_hdr.e_type));
-	printf("  Entry point address: %#x\n", (unsigned int)ef_hdr.e_entry);
+	printf("  ABI Version:                       %d\n",
+			ef_hdr.e_ident[EI_ABIVERSION]);
+	printf("  Type:                              %s\n",
+			gt_lf_typ_strn(ef_hdr.e_type));
+	printf("  Entry point address:               %#x\n",
+			(unsigned int)ef_hdr.e_entry);
 	close(fildsc_o);
 	return (0);/*success*/
 }
