@@ -81,7 +81,7 @@ int main(int argscont, char *argsvec[])
 			ef_hdr.e_ident[EI_ABIVERSION]);
 	printf("  Type:                              %s\n",
 			gt_lf_typ_strn(ef_hdr.e_type));
-	printf("  Entry point address:               %#x\n",
+	printf("  Entry point address:               %#x",
 			(unsigned int)ef_hdr.e_entry);
 	close(fildsc_o);
 	return (0);/*success*/
