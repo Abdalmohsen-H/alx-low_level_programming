@@ -14,7 +14,7 @@ void prnt_hx_byts(unsigned char *byts, size_t numb_byts)
 {size_t k;
 	for (k = 0; k < numb_byts; k++)
 	{
-		printf("%02x", byts[k]);
+		printf("%02x ", byts[k]);
 	}
 	printf("\n");
 }
@@ -46,23 +46,29 @@ char *gt_lf_typ_strn(uint16_t e_type)
 int main(int argscont, char *argsvec[])
 {Elf64_Ehdr ef_hdr;
 	int fildsc_o;
+	char magic[4];
 
 	if (argscont != 2)
 	{fprintf(stderr, "Usage: %s then elf_filename\n", argsvec[0]);
 		exit(98);
 	}
-
 	fildsc_o = open(argsvec[1], O_RDONLY);
 	if (fildsc_o < 0)
-	{
-		perror("open error");
+	{perror("open error");
 		exit(98);
 	}
 	if (read(fildsc_o, &ef_hdr, sizeof(ef_hdr)) != sizeof(ef_hdr))
 	{perror("read error");
 		exit(98);
 	}
-
+	if (read(file, magic, 4) != 4)
+	{perror("read magic error");
+		exit(98);
+	}
+	if (magic[0] != 0x7f || magic[1] != 'E' || magic[2] != 'L' || magic[3] != 'F')
+	{perror("Not an ELF header\n");
+		exit(98);
+	}
 	printf("ELF Header:\n");/*just required info*/
 	printf("  Magic:   ");
 	prnt_hx_byts(ef_hdr.e_ident, EI_NIDENT);
