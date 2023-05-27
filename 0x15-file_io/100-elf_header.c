@@ -14,7 +14,7 @@ void prnt_hx_byts(unsigned char *byts, size_t numb_byts)
 {size_t k;
 	for (k = 0; k < numb_byts; k++)
 	{
-		printf("%02x ", byts[k]);
+		printf("%02x", byts[k]);
 	}
 	printf("\n");
 }
