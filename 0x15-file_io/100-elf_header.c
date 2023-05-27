@@ -61,7 +61,7 @@ int main(int argscont, char *argsvec[])
 	{perror("read error");
 		exit(98);
 	}
-	if (read(file, magic, 4) != 4)
+	if (read(fildsc_o, magic, 4) != 4)
 	{perror("read magic error");
 		exit(98);
 	}
