@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
-
 /**
  *add_dnodeint_end - insert node at end
  * of doubly linked list
@@ -27,6 +26,11 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	newnod->next = NULL;
 	newnod->n = n;
 	newnod->prev = *headtmp;
+	if (*headtmp == NULL)
+	{newnod->prev = NULL;
+		*head = newnod;
+		return (newnod);
+	}
 	if (*headtmp != NULL) /* (*headtmp)->next already = NULL*/
 	{
 		(*headtmp)->next = newnod;
