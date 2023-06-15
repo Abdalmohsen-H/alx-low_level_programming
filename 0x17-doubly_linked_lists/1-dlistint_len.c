@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *print_dlistint - print data of nodes
- * in doubly linked list
+ *dlistint_len - return lengtho of doubly
+ * linked list
  *@h: head of D lnkdlist
  *or just node of list you have to check
  *
  *Return: num of nodes found
  */
-size_t print_dlistint(const dlistint_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 	const dlistint_t *headtmp = h;
 	size_t cntr = 0;
@@ -20,11 +20,9 @@ size_t print_dlistint(const dlistint_t *h)
 	}
 	while (headtmp->next)
 	{
-		printf("%d\n", headtmp->n);
 		cntr++;
 		headtmp = headtmp->next;
 	}
-	printf("%d\n", headtmp->n);
 	cntr++;
 	return (cntr);
 }
