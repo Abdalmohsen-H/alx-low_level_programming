@@ -7,7 +7,7 @@
  * and return this node address(double pintr)
  *@head: double pointr for head  of D lnkdlist
  *or just node of list you have to check
- *
+ *@n: data for new node
  *Return: return added node address(double pintr)
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
@@ -20,7 +20,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	{
 		return (NULL);
 	}
-	while (*headtmp != NULL &&(*headtmp)->prev != NULL)
+	while (*headtmp != NULL && (*headtmp)->prev != NULL)
 	{headtmp = &(*headtmp)->prev;
 	}
 	newnod->next = *headtmp;
