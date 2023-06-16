@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *insert_dnodeint_at_index - get node by index
+ *insert_dnodeint_at_index - insrt node by index
  * in doubly linked list
  *@h: double pintr of head of D lnkdlist
  *@idx: index
