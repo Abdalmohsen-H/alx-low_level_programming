@@ -21,6 +21,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (index == 0)/*if true u must refer to *head inside*/
 	{
 		*head = (*head)->next;/*move *header to next node*/
+		*head->prev = NULL;
 		free(current);
 		return (1);
 	}
@@ -32,7 +33,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		{
 			node = *head;/*we save *head node to free it*/
 			previous_node->next = current->next;/*order of this block matters*/
-			(current->next)->prev = previous_node;
+			if (current->next != NULL)
+				(current->next)->prev = previous_node;
 			free(node);/*this should happen in this order*/
 			return (1);/*to avoid losing data*/
 		}
