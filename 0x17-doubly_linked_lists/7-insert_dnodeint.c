@@ -29,11 +29,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			{
 				return (add_dnodeint_end(h, n));
 			}
-			(head->prev)->next = newnod;
+			newnod->next = head->next;
+			head->next = newnod;
 			newnod->n = n;
-			newnod->prev = head->prev;
-			newnod->next = head;
-			head->prev = newnod;
+			newnod->prev = head;
+			(newnod->next)->prev = newnod;
 			return (newnod);
 
 		}
