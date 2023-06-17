@@ -21,25 +21,25 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	newnod = (dlistint_t *) malloc(sizeof(dlistint_t));
 	if (newnod == NULL)
 		return (NULL);
-	if (head->next == NULL && idx == 1)/*to avoid adding out of range idx*/
-		return (add_dnodeint_end(h, n));
-	if (head->next != NULL)
-		head = head->next;
-	while (head->next != NULL)
+	while (head != NULL)
 	{
-		if (idx == cntr)
-		{(head->prev)->next = newnod;
-			newnod->n = n;
-			newnod->prev = head->prev;
-			newnod->next = head;
-			head->prev = newnod;
-			return (newnod);
+		if (idx == cntr)/*index match found then check if it lsat node or not*/
+		{
+			if (head->next == NULL)
+				return (add_dnodeint_end(h, n));
+			else
+			{
+				(head->prev)->next = newnod;
+				newnod->n = n;
+				newnod->prev = head->prev;
+				newnod->next = head;
+				head->prev = newnod;
+				return (newnod);
+			}
 		}
 		head = head->next;
 		cntr++;
 	}
-	if (idx == cntr)
-		return (add_dnodeint_end(h, n));
 	free(newnod);
 	return (NULL);
 }
