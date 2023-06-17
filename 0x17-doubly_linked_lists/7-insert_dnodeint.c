@@ -26,16 +26,16 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		if (idx == cntr)/*index match found then check if it lsat node or not*/
 		{
 			if (head->next == NULL)
-				return (add_dnodeint_end(h, n));
-			else
 			{
-				(head->prev)->next = newnod;
-				newnod->n = n;
-				newnod->prev = head->prev;
-				newnod->next = head;
-				head->prev = newnod;
-				return (newnod);
+				return (add_dnodeint_end(h, n));
 			}
+			(head->prev)->next = newnod;
+			newnod->n = n;
+			newnod->prev = head->prev;
+			newnod->next = head;
+			head->prev = newnod;
+			return (newnod);
+
 		}
 		head = head->next;
 		cntr++;
