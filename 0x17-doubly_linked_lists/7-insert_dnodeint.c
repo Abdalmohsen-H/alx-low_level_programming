@@ -10,7 +10,7 @@
  *Return: node addrs if found index else NULL
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
-{unsigned int cntr = 0;
+{unsigned int cntr = 1;
 	dlistint_t *head = *h;
 	dlistint_t *newnod;
 
