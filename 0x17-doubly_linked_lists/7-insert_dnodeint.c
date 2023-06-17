@@ -14,15 +14,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *head = *h;
 	dlistint_t *newnod;
 
-	if (head == NULL || h == NULL)
-		return (NULL);
+	if (idx == 0)
+		return (add_dnodeint(h, n));
+	if ((head == NULL || h == NULL) && idx != 0)/*idx != 0 is at top*/
+		return (NULL);/*and conditn is not important just to remember logic*/
 	newnod = (dlistint_t *) malloc(sizeof(dlistint_t));
 	if (newnod == NULL)
 		return (NULL);
-	if (head == NULL)
-		return (NULL);
-	if (idx == 0)
-		return (add_dnodeint(h, n));
 	if (head->next == NULL && idx == 1)/*to avoid adding out of range idx*/
 		return (add_dnodeint_end(h, n));
 	if (head->next != NULL)
