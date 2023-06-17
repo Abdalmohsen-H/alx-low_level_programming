@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
 /**
@@ -18,5 +19,5 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		head = head->next;
 		cntr++;
 	}
-	return (NULL);
+	return (NULL);/* head == NULL */
 }
