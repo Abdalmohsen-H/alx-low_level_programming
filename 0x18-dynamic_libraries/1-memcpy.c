@@ -4,12 +4,14 @@
  * _memcpy - short description
  * @dest: input
  * @src: input
- * @n: input
+ *@n: this is input n
+ *
  * Return: returns .
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
-{
-char *cc = "cc";
+{(void)dest;
+	(void)src;
+	(void)n;
 /* TODO: Implement *_memcpy function */
-return (cc);
+return ("jygjy");
 }

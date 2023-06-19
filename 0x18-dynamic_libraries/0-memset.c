@@ -7,7 +7,8 @@
 *Return: char pointer
 */
 char *_memset(char *s, char b, unsigned int n)
-{
-char *fdf = "ffs";
-return (fdf);
+{(void)s;
+	(void)b;
+	(void)n;
+return ("nothing");
 }
