@@ -7,7 +7,9 @@
  * Return: specific Numbers based on randseed value
  */
 int rand(void)
-{int randseed = -1;/* initializes the static variable*/
+{static int randseed = -1;/* initializes the static variable*/
+	
+	/*very important to use static int*/
 	randseed++;/*iterate with every func calling*/
 	switch (randseed)
 	{/*my selected values are less by one of desired value*/
