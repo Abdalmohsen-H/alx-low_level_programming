@@ -25,6 +25,6 @@ int rand(void)
 		case 5:
 			return (74);
 		default:/*any default value*/
-			return (99);
+			return (2 * randseed);
 	}
 }
