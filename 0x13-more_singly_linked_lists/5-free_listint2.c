@@ -15,7 +15,8 @@ void free_listint2(listint_t **head)
 {
 	listint_t *temp;
 
-	if (*head == NULL || head == NULL)
+	/*important we didnt check *head below to avoid seg err when **head is null*/
+	if (head == NULL)/*only check **head here as *head checked later*/
 		return;/*because this function return void */
 	/* here *head represent head pointer itself*/
 	while (*head != NULL)/*true if is list still have nodes then loop*/
