@@ -13,7 +13,7 @@ void hash_table_print(const hash_table_t *ht)
 	if (ht != NULL)
 	{
 		for (idx = 0; idx < ht->size; idx++)
-		{tmpnode = ht->array[idx]			
+		{tmpnode = ht->array[idx];			
 			while (tmpnode != NULL && tmpnode->key != NULL)
 			{
 				printf("'%s': '%s'", tmpnode->key, tmpnode->value);
