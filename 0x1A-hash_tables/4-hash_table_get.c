@@ -1,4 +1,7 @@
-#include "hash_tables.h"*
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include "hash_tables.h"
 /**
  * hash_table_get - hash_table_get
  *  *@ht: ht
@@ -14,7 +17,6 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	hash = key_index((const unsigned char *) key, ht->size);
 	if (ht->array[hash] == NULL)
 		return (NULL);
-	ht->array[hash]->key;
 	tmpnode = ht->array[hash];
 	while (tmpnode != NULL && tmpnode->key != NULL)
 	{
