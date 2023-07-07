@@ -9,7 +9,7 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *ht;
+	hash_table_t *htbl;
 
 	htbl = malloc(sizeof(hash_table_t));
 	if (htbl == NULL)/* if failed */
