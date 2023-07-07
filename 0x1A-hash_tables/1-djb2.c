@@ -1,3 +1,4 @@
+#include "hash_tables.h"
 /**
  * hash_djb2 - t's an implementation of the djb2 algorithm
  * source from github 
