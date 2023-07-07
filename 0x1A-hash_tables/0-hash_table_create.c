@@ -10,20 +10,23 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *htbl;
-	unsigned long int idx;
+	/*unsigned long int idx;*/
 
 	htbl = malloc(sizeof(hash_table_t));
 	if (htbl == NULL)/* if failed */
 		return (NULL);
 	htbl->size = size;
+	/*array of type hash_node_t**, which means it is*/
+	/*an array of pointers to hash_node_t structures.*/
+	/*so inside malloc must use sizeof(hash_node_t *)*/
 	htbl->array = malloc(sizeof(hash_node_t *) * size);
 	if (htbl->array == NULL)/*malloc filed*/
 	{
 		free(htbl);
 		return (NULL);
 	}
-	for (idx = 0; idx < size; idx++)
-		htbl->array[idx] = NULL;
+	/*for (idx = 0; idx < size; idx++)*/
+	/*	htbl->array[idx] = NULL;*/
 
 	return (htbl);
 }
