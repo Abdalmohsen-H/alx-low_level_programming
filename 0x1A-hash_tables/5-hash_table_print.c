@@ -11,17 +11,19 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int idx;
 
 	if (ht != NULL)
-	{
+	{printf("{");
 		for (idx = 0; idx < ht->size; idx++)
 		{tmpnode = ht->array[idx];
 			while (tmpnode != NULL && tmpnode->key != NULL)
 			{
 				printf("'%s': '%s'", tmpnode->key, tmpnode->value);
+				printf(", ");
 				if (tmpnode->next != NULL)
 					tmpnode = tmpnode->next;
 				else
 					break;
 			}
 		}
+	printf("}\n");
 	}
 }
