@@ -18,8 +18,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	hash = key_index((const unsigned char *) key, ht->size);
 	nw_node =  malloc(sizeof(hash_node_t));
-	if (nw_node == NULL)
-		return (0);
 	cpy_val = strdup(value);
 	if (cpy_val == NULL)
 		return (0);
