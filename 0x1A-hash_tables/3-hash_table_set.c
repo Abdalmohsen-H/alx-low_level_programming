@@ -18,21 +18,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	hash = key_index((const unsigned char *) key, ht->size);
 
-	/*cpy_val = strdup(value);*/
-	if (strlen(value))
-	{
-		/*printf("%s , %ld\n",value , strlen(value));*/
-		cpy_val = malloc(strlen(value) + 1);
-		if (cpy_val == NULL)
-			return (0);
-		strcpy(cpy_val, value);
-	}
-	else
-	{cpy_val = malloc(1);
-		if (cpy_val == NULL)
-			return (0);
-		cpy_val[0] = '\0';
-	}
+	cpy_val = strdup(value);
+
 	tmpnode = ht->array[hash];
 	while (tmpnode != NULL && tmpnode->key != NULL)
 	{
@@ -46,7 +33,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		else
 			break;
 	}
-
 	nw_node =  malloc(sizeof(hash_node_t));
 	if (nw_node == NULL)
 	{free(cpy_val);
@@ -59,13 +45,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 	nw_node->value = cpy_val;
-	/*ht->array[hash] could be null or collision node*/
-	if (ht->array[hash] == NULL)
-		nw_node->next = NULL;
-	else
-		nw_node->next = ht->array[hash];
-
+	nw_node->next = ht->array[hash];/*could be null or collision node*/
 	ht->array[hash] = nw_node;
-
 	return (1);
 }
