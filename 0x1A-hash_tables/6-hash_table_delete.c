@@ -4,10 +4,10 @@
 #include "hash_tables.h"
 /**
  *hash_table_delete - delete hashtable
- *@ht - hashtable
+ *@ht: hashtable
  */
 void hash_table_delete(hash_table_t *ht)
-{hash_node_t *tmpnode;
+{hash_node_t *tmpnode, *tmpnode2;
 	unsigned long int idx;
 
 	if (ht != NULL)
@@ -18,11 +18,12 @@ void hash_table_delete(hash_table_t *ht)
 			{
 				free(tmpnode->key);
 				free(tmpnode->value);
+				tmpnode2 = tmpnode->next;
 				free(tmpnode);
-					if (tmpnode->next != NULL)
-						tmpnode = tmpnode->next;
-					else
-						break;
+				if (tmpnode->next != NULL)
+					tmpnode = tmpnode2;
+				else
+					break;
 			}
 		}
 		free(ht->array);
