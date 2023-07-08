@@ -24,7 +24,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	while (tmpnode != NULL && tmpnode->key != NULL)
 	{
 		if (strcmp(tmpnode->key, key) == 0)
-		{/*printf("key already exist update value");*/
+		{free(tmpnode->value);/*printf("ky exist update value");*/
 			tmpnode->value = cpy_val;
 			return (1);
 		}
