@@ -18,11 +18,21 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	hash = key_index((const unsigned char *) key, ht->size);
 
-	/*value_copy = strdup(value);*/
-	cpy_val = malloc(strlen(value) + 1);
-	if (cpy_val == NULL)
-		return (0);
-	strcpy(cpy_val, value);
+	/*cpy_val = strdup(value);*/
+	if (strlen(value))
+	{
+		/*printf("%s , %ld\n",value , strlen(value));*/
+		cpy_val = malloc(strlen(value) + 1);
+		if (cpy_val == NULL)
+			return (0);
+		strcpy(cpy_val, value);
+	}
+	else
+	{cpy_val = malloc(1);
+		if (cpy_val == NULL)
+			return (0);
+		cpy_val[0] = '\0';
+	}
 	tmpnode = ht->array[hash];
 	while (tmpnode != NULL && tmpnode->key != NULL)
 	{
