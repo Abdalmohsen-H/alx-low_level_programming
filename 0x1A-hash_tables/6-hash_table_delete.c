@@ -20,10 +20,7 @@ void hash_table_delete(hash_table_t *ht)
 				free(tmpnode->value);
 				tmpnode2 = tmpnode->next;
 				free(tmpnode);
-				if (tmpnode->next != NULL)
-					tmpnode = tmpnode2;
-				else
-					break;
+				tmpnode = tmpnode2;
 			}
 		}
 		free(ht->array);
