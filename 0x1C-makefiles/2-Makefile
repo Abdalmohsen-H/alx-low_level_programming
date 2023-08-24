@@ -1,0 +1,6 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o) # this makes a list of .o files based on names of .c files on SRC by replacing .c with .o while keeping file names and save it OBJ variable
+NAME = school
+all: ${OBJ}
+	${CC} ${OBJ} -o $(NAME)
