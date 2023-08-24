@@ -1,4 +1,5 @@
-CC = gccSRC = main.c school.c
+CC = gcc
+SRC = main.c school.c
 OBJ = $(SRC:.c=.o) # this makes a list of .o files based on names of .c files on SRC by replacing .c with .o while keeping file names and save it OBJ variable
 NAME = school
 RM = rm -f # force remove to never fail and never show errors and never ask for confirmation
