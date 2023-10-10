@@ -1,5 +1,5 @@
-#ifndef  search_algo_header
-#define  search_algo_header
+#ifndef search_algo_header
+#define search_algo_header
 #include <stdio.h>
 #include <stdlib.h>
 int linear_search(int *array, size_t size, int value);
