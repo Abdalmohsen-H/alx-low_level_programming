@@ -17,7 +17,7 @@ int binary_search(int *array, size_t size, int value)
 		{
 			mid = (rgtidx + lftidx) / 2;
 			/* print every iteration array */
-			printf("Searching in array:");
+			printf("Searching in array: ");
 			for (idx = lftidx; idx < rgtidx; idx++)
 			{
 				printf("%d, ", array[idx]);
@@ -34,7 +34,7 @@ int binary_search(int *array, size_t size, int value)
 			}
 			else /* array[mid] > value */
 			{
-				rgtidx = mid -1;
+				rgtidx = mid - 1;
 			}
 		}
 	}
